@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack kapitány legénysége</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="legenda.html">Jack kapitány legendája</a></li>
+            <li><a href="legenyseg.html">A legénység</a></li>
+            <li><a href="feketegyongy.html">A Fekete Gyöngy</a></li>
+            <li><a href="kalandok.html">Portyák és kalandok</a></li>
+            <li><a href="kincsek.html">Zsákmányok és kincsek</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <section class="bemutatkozas">
+            <h1>Jack kapitány és legénysége – Az óceánok rettegett urai</h1>
+
+            <div class="bemutato_kep">
+                <img src="img/bemutato_oldal_kep.jpg" alt="Jack kapitány fedélzete egy sötét és misztikus éjszakán.">
+            </div>
+
+            <div class="idezet">
+                <blockquote>„A kincsért bármit megteszünk, de a becsületért mindent feladunk!” – Jack kapitány</blockquote>
+            </div>
+            <p>Üdvözlünk a recsegő fedélzeten, ahol a rettegett Jack kapitány és hírhedt legénysége bemutatkozik!
+                Merülj el a kalózélet zord valóságában, és ismerd meg a legénység legendás tagjait,
+                akik a legfélelmetesebb kincseket kutatják és rettegésben tartják a tengerek hajósait.
+                Készülj fel egy utazásra, amely tele van kalanddal, káosszal és arannyal!</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Jack kapitány legénysége. Minden jog fenntartva</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <button onclick="scrollToTop()" id="backToTop">↑ Vissza a Tetejére</button>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const backToTopButton = document.getElementById('backToTop');
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                    }
+                });
+
+                function scrollToTop() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+    </script>
+    <script>
+        function toggleMenu() {
+            const navlinks = document.querySelector('.nav-links');
+            navlinks.classList.toggle('show')
+        }
+    </script>
+</body>
+</html>

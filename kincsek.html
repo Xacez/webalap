@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zsákmányok és kincsek</title>
+  <link rel="stylesheet" href="css/kincsek.css">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Kezdőlap</a></li>
+      <li><a href="legenda.html">Jack kapitány legendája</a></li>
+      <li><a href="legenyseg.html">A legénység</a></li>
+      <li><a href="feketegyongy.html">A Fekete Gyöngy</a></li>
+      <li><a href="kalandok.html">Portyák és kalandok</a></li>
+      <li><a href="kincsek.html">Zsákmányok és kincsek</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+
+    <section class="kincsek">
+      <h1>Zsákmányok és Kincsek – Jack kapitány szerzeményei</h1>
+      <div class="kincsek_kep">
+        <img src="img/kincsek_oldal_kep.jpg" alt="Egy kincsövezte kalózjelenet, ahol egy hatalmas, nyitott kincsesláda aranyló érmékkel, csillogó drágakövekkel és ősi ereklyékkel van tele">
+      </div>
+      <p>Itt gyűjtöttük össze Jack kapitány és legénysége legnagyobb zsákmányait és kincseit,
+        amiket a világ tengereiről gyűjtöttek be. Aranytömbök, színpompás drágakövek, misztikus, átkos ereklyék,
+        és a legyőzött ellenségek zászlói díszítik a Fekete Gyöngy fedélzetét.</p>
+    </section>
+
+    <section class="kincsek_galeria">
+      <h2>A legnagyobb kincsek</h2>
+      <div class="galeria">
+        <div class="kep">
+          <img src="img/eldorado_aranya.jpg" alt="El Dorado Aranya" onclick="megjelenitLeiras('El Dorado Aranya')">
+        </div>
+        <div class="kep">
+          <img src="img/voros_rubinok_szive.jpg" alt="Vörös Rubinok Szíve" onclick="megjelenitLeiras('Vörös Rubinok Szíve')">
+        </div>
+        <div class="kep">
+          <img src="img/kisertet_sziget_ezustje.jpg" alt="Kisértet-sziget Ezüstje" onclick="megjelenitLeiras('Kisértet-sziget Ezüstje')">
+        </div>
+      </div>
+      <div id="leiras_doboz" class="leiras_doboz">
+        Kattints egy kincsre a részletek megjelenítéséhez!
+      </div>
+    </section>
+
+    <section class="kincsek_tortenetei">
+      <h2>Kincsek Történetei</h2>
+      <div class="tortenet">
+        <h3>El Dorado Aranya – A Város, amely Soha Nem Alszik</h3>
+        <p>Jack kapitány évekig kutatta a legendás El Dorado városát, amelyet arannyal borítottak. Egy misztikus térkép és egy szellemjárta kormányos vezette őt és legénységét a veszélyes őserdőkön át, egészen a város kapujáig. Ahogy beléptek, a sztélék között aranyló fény sugárzott, de a helyet egy átok sújtotta: mindenki, aki megérintette az aranyat, örök kárhozatra ítéltetett. Jacknek sikerült elcsenni egy darabot a sztéléből, mielőtt az ősi szellemek feléledtek volna.</p>
+      </div>
+      <div class="tortenet">
+        <h3>A Vörös Rubinok Szíve – Az Átok, amely Soha Nem Törik Meg</h3>
+        <p>A Vörös Rubinok Szívét a mélység istene, Poseidon, maga átkozta meg, amikor egy ősi tengeri háború során a rubin ellopták tőle. Jack kapitány egy hírhedt tengeri templomban találta meg a rubint, melyet vízköpő szörnyek és árnyéksereg őrzött. Mikor Jack elvitte a drágakövet, a tenger hirtelen háborgott, és viharfelhők gyűltek. Azóta a kapitánynak mindig egy tengeri talizmánt kell hordania, hogy megvédje magát az átok haragjától.</p>
+      </div>
+      <div class="tortenet">
+        <h3> Kisértet-sziget Ezüstje – A Szellemek Kincse</h3>
+        <p>A Kísértet-sziget egy ködbe burkolózó sziget, ahol minden éjjel kísértetek vonulnak a part mentén. A legenda szerint egykor egy hős kalózkapitány szelleme rejtette el az ezüstkincset, hogy megvédje a halandóktól. Amikor Jack kapitány és legénysége megérkezett a szigetre, a szellemek figyelmeztették őket: 'Az, aki ellopja az ezüstöt, soha nem hagyja el a szigetet élve.' Jack bátorsága és egy kis szerencse révén mégis megszerezte a kincset, de azóta is hallani lehet a szellemek suttogását minden teliholdkor.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2024 Jack kapitány legénysége. Minden jog fenntartva.</p>
+  </footer>
+  <button onclick="scrollToTop()" id="backToTop">↑ Vissza a Tetejére</button>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const backToTopButton = document.getElementById('backToTop');
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('show');
+      } else {
+        backToTopButton.classList.remove('show');
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+  <script>
+    function megjelenitLeiras(kincsneve) {
+      const leirasDoboz= document.getElementById('leiras_doboz');
+      let leiras= "";
+
+      switch (kincsneve) {
+        case 'El Dorado Aranya':
+          leiras = "El Dorado Aranya egy legendás aranysztélé, amely ősi misztikus erőt sugároz. A romok között megtalált sztélé állítólag az elveszett város titkait őrzi, és mindenki, aki megérinti, érezheti a hatalom rejtélyes vibrálását. A sztélé körül áradó aranyló fény megfoghatatlan ígéretet hordoz: a város kincseinek és tudásának feltárását, de csak az igazán méltók számára.";
+          break;
+        case 'Vörös Rubinok Szíve':
+          leiras = "A Vörös Rubinok Szíve páratlan szépségű drágakő, amelyet a tenger istenének átkos hatalma véd. A rubin élénkvörös ragyogása, amely még a legsötétebb éjszakát is beragyogja, a rejtett erőt sugározza. A legenda szerint mindenki, aki a rubin birtokosa lesz, szembenéz a tenger haragjával, és csak a legerősebbek képesek megszabadulni az átok hatalmából.";
+          break;
+        case 'Kisértet-sziget Ezüstje':
+          leiras = "Kisértet-sziget Ezüstje egy kincs, amely a szellemektől őrzött szigeten rejtőzik, és csak a legbátrabbak mertek szembenézni vele. Az ezüst hideg, kékes ragyogással világít a sötétben, és úgy tartják, hogy azok, akik megszerzik, soha nem tudnak elmenekülni a szigeti kísértetek figyelő tekintete elől. A kincs maga egy marék ezüstérme, kardok, és más fémes ereklyék, amelyek minden pillanatban a szellemvilág jelenlétét sugallják.";
+          break
+      }
+
+      leirasDoboz.textContent = leiras;
+
+    }
+  </script>
+</body>
+</html>

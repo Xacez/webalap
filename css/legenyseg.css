@@ -1,0 +1,327 @@
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1b1b1b;
+    color: #f4e4c1;
+    line-height: 1.6;
+    background-image: url('../img/fa_hatter.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+
+header {
+    background-color: rgb(0, 0, 0, 0.8);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f4e4c1;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d4af37
+}
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1, h2 {
+
+    color: #d4af37;
+    text-shadow: 1px 1px 5px #000;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #f4e4c1;
+    font-size: 0.9em;
+    border-top: 3px solid #d4af37;
+}
+
+section.legenyseg {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    margin-bottom: 20px;
+}
+
+.legenyseg_kep {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.legenyseg_kep img {
+
+    max-width: 75%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border: 3px solid #d4af37;
+}
+
+button, .button {
+    background-color: #d4af37;
+    color: #1b1b1b;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover .button:hover {
+    background-color: #b8860b;
+    transform: scale(1.05);
+}
+
+.kartya_kontener {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+
+.kartya {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: calc(33.3333% - 20px);
+    padding: 20px;
+    text-align: center;
+    color: #f4e4c1;
+    transition: transform 0.3s;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.kartya:hover {
+    transform: scale(1.05) translatez(0);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.kartya img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border: 3px solid #d4af37;
+    margin-bottom: 20px;
+
+}
+
+.kartya h2 {
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.kartya h3 {
+    color: #d4af37;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 0;
+
+}
+
+.leiras {
+    font-size: 0.95em;
+    line-height: 1.4;
+    text-align: left;
+    margin: 0 0 10px;
+}
+
+.kepesseg_kontener {
+    text-align: left;
+
+}
+
+.kepesseg_csik {
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 10px;
+    width: 100%;
+    border: 0.1px solid black;
+    margin-bottom: 10px;
+}
+
+.csik_magas_szint {
+    height: 100%;
+    background-color: #d4af37;
+    width: 0;
+    animation: feltoltes 2s forwards;
+}
+
+@keyframes feltoltes {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--szint);
+    }
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d4af37;
+    color: #1b1b1b;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+#backToTop.show {
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 1.8em;
+    }
+
+    section.bemutato_kep img {
+        max-width: 90%;
+    }
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #f4e4c1;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #1b1b1b;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        z-index: 1000;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        border-bottom: 1px solid #f4e4c1;
+
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid #d4af37;
+    }
+
+    header {
+        padding: 5px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    section.bemutato_kep img {
+        max-width: 100%;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .bemutato_kep img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
