@@ -59,10 +59,10 @@
     <footer>
         <p>© 2024 Jack kapitány legénysége. Minden jog fenntartva.</p>
     </footer>
+
     <button onclick="scrollToTop()" id="backToTop">↑ Vissza a Tetejére</button>
 
     <script>
-
         document.addEventListener('DOMContentLoaded', function () {
             const elements = document.querySelectorAll('.fade-in-up');
             const observer = new IntersectionObserver(entries => {
@@ -78,6 +78,7 @@
             });
         });
     </script>
+
     <script>
         window.addEventListener('scroll', function () {
             const backToTopButton = document.getElementById('backToTop');
@@ -92,6 +93,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
+
     <script>
         function toggleMenu() {
             const navlinks = document.querySelector('.nav-links');
